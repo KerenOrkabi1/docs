@@ -98,6 +98,21 @@ When product header is present:
 - filters should live inside the page/canvas, not inside the product header
 - it should not break family consistency
 - it should help orientation and context, not become the primary work area
+  
+## Product-header token and accent rule
+The product header should remain structurally part of the shell system, but it should not become a full branded surface by default.
+
+Default token behavior:
+- product-header background should remain neutral by default
+- product header may inherit theme through accent usage rather than full background fill
+
+Approved accent usage:
+- selected tab indicator uses `product-tab-selected-indicator`
+- current stage emphasis uses `product-stage-current-accent`
+- stage icon/emphasis uses `product-stage-icon-accent`
+- general product-header accent uses `product-header-accent`
+
+Product-header areas must not define raw theme values directly.
 
 ## Landing vs product-level defaults
 The same family category can appear in different placements.
