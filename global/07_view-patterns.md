@@ -48,6 +48,20 @@ If a view is redesigned and accepted:
 ## Relationship to families
 Families such as Operational Overview should link to these patterns rather than redefining them.
 
+## Theme reference rule
+Reusable views must not define local theme values.
+
+Board, list, and table patterns should reference:
+- global semantic tokens
+- approved global alias tokens
+- theme-governed reusable pattern tokens
+
+Examples:
+- table header should use a global table/header token
+- selected row should use a global selected-state token
+- focus should use a global focus token
+- board/list emphasis should use globally governed accent tokens
+
 ## Suggested companion files
 - `/docs/views/board.md`
 - `/docs/views/list.md`
