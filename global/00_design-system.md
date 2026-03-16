@@ -108,6 +108,18 @@ Changing the active theme should update:
 - AI surface tokens where relevant
 - Bryntum-aligned theme references where relevant
 
+## Active theme selection
+- Active theme key: `altus-blue`
+- Active theme file: `/docs/theme/altus-blue.md`
+
+## Active theme behavior
+The active theme file is the current source of truth for:
+- semantic token values
+- alias token values
+- brand accent behavior
+
+If the active theme key changes, all global shell, product-header, reusable pattern, and view token references should resolve from the new active theme.
+
 ## Alias token model
 Semantic tokens define core color meaning.
 Alias tokens define where those values are used.
