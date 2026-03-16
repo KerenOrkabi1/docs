@@ -16,7 +16,8 @@ The shell does not define the canvas family. The canvas family is defined separa
 ### Top banner
 - Height: 48px
 - Width: full page width
-- Default background: `#616161`
+- Default background: `shell-top-banner-bg`
+- Default foreground/text: `shell-top-banner-text`
 - Treated as fixed product chrome
 
 ### Left side navigation
@@ -24,11 +25,24 @@ The shell does not define the canvas family. The canvas family is defined separa
 - Expanded width: 199px
 - Collapsed width: 43px
 - Height: full remaining height below the top banner
-- Default background: `#f0f0f0`
+- Default background: `shell-nav-bg`
+- Default foreground/text: `shell-nav-text`
 - Treated as fixed product chrome
 
 ### Main page background
-- Default canvas/page background: `#f9f9f9`
+- Default canvas/page background: `page-canvas-bg`
+  
+## Shell token rule
+Shell files must not define raw theme values.
+
+Shell areas should reference global alias tokens defined by the active theme model.
+
+Base shell token references:
+- shell-top-banner-bg
+- shell-top-banner-text
+- shell-nav-bg
+- shell-nav-text
+- page-canvas-bg
 
 ## Shell behavior principles
 - Preserve product chrome consistency.

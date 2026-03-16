@@ -72,6 +72,101 @@ Any future theme change should be made here first, then inherited across:
 - AI panel surfaces
 - Bryntum-aligned components
 
+## Theme architecture
+All real theme values must be owned globally.
+
+Theme values may live:
+- directly in this file
+- or in named theme files under `/docs/theme/`
+
+Other files must not define raw theme values.
+Other files may only reference:
+- semantic tokens
+- alias tokens
+
+## Theme registry
+Altus supports named brand themes.
+
+Initial theme files:
+- `/docs/theme/altus-blue.md`
+- `/docs/theme/altus-emerald.md`
+
+Each theme file should define:
+- theme display name
+- theme key
+- core semantic token values
+- alias token mappings where approved
+
+## Active theme rule
+One named theme should be treated as the active product theme at a time.
+
+Changing the active theme should update:
+- shell tokens
+- product-header accent tokens
+- reusable interaction tokens
+- reusable view/pattern tokens
+- AI surface tokens where relevant
+- Bryntum-aligned theme references where relevant
+
+## Active theme selection
+- Active theme key: `altus-blue`
+- Active theme file: `/docs/theme/altus-blue.md`
+
+## Active theme behavior
+The active theme file is the current source of truth for:
+- semantic token values
+- alias token values
+- brand accent behavior
+
+If the active theme key changes, all global shell, product-header, reusable pattern, and view token references should resolve from the new active theme.
+
+## Alias token model
+Semantic tokens define core color meaning.
+Alias tokens define where those values are used.
+
+Example semantic tokens:
+- color-primary
+- color-focus
+- background-app
+- background-nav
+- background-shell-top
+- text-primary
+- text-on-primary
+- border-subtle
+- color-selected
+
+Example alias tokens:
+- shell-top-banner-bg
+- shell-nav-bg
+- page-canvas-bg
+- product-header-accent
+- product-tab-selected-indicator
+- product-stage-current-accent
+- product-stage-icon-accent
+- interactive-focus-ring
+- interactive-selected-bg
+- table-header-bg
+- table-row-hover-bg
+- table-row-selected-bg
+- table-focus-ring
+
+## Brand-theme behavior rule
+Altus uses brand themes rather than full surface-theme changes by default.
+
+Default expectations:
+- color-primary may change by theme
+- color-focus may change by theme
+- product-header accent usage may change by theme
+- top banner may either inherit from the active brand theme or use its own theme-approved color
+- side navigation should remain neutral by default
+- canvas/page background should remain neutral by default
+
+## Future view/component rule
+If a new area is added later, such as a table, board, list, panel, or reusable component:
+- it must reference global semantic or alias tokens
+- it must not define its own raw theme values
+- it may introduce a new alias token only if the alias remains globally governed
+
 ## Design system baseline
 ### Primary base system
 Fluent UI 9 is the core design-system baseline for Altus.
