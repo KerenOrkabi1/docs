@@ -47,6 +47,28 @@ Reusable visual components such as summary blocks, tables, and boards should hav
 
 If a global component changes and is accepted, downstream pages should inherit the approved update.
 
+## Theme-token consumption rule
+Reusable visual patterns must consume global semantic tokens or approved alias tokens only.
+
+They must not define local raw theme values.
+
+This applies to:
+- cards
+- summary blocks
+- tables
+- boards
+- list patterns
+- reusable AI surfaces
+- reusable visual states
+
+Future-ready reusable alias examples:
+- table-header-bg
+- table-row-hover-bg
+- table-row-selected-bg
+- table-focus-ring
+- board-column-accent
+- list-selected-indicator
+
 ## What belongs here
 - visual hierarchy rules
 - semantic state treatment
