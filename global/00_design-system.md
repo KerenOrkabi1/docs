@@ -91,6 +91,7 @@ Initial theme files:
 - `/docs/theme/altus-blue.md`
 - `/docs/theme/altus-emerald.md`
 - `/docs/theme/altus-purple.md`
+- `/docs/theme/altus-teal.md`
 
 Each theme file should define:
 - theme display name
