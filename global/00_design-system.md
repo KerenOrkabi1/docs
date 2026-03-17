@@ -90,6 +90,7 @@ Altus supports named brand themes.
 Initial theme files:
 - `/docs/theme/altus-blue.md`
 - `/docs/theme/altus-emerald.md`
+- `/docs/theme/altus-purple.md`
 
 Each theme file should define:
 - theme display name
@@ -119,6 +120,14 @@ The active theme file is the current source of truth for:
 - brand accent behavior
 
 If the active theme key changes, all global shell, product-header, reusable pattern, and view token references should resolve from the new active theme.
+
+## Theme implementation rules
+
+When implementing the theme system in code, follow these rules to maintain single source of truth.
+
+### Rule 1: Always reference ACTIVE_THEME_KEY
+
+Never hardcode specific theme keys in implementation files. Always import and use the ACTIVE_THEME_KEY constant from tokens.ts.
 
 ## Alias token model
 Semantic tokens define core color meaning.
