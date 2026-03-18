@@ -15,6 +15,14 @@ Best for:
 - intervention buckets
 - decision categories
 - operational overview pages
+  
+#### Board view card interactions
+Cards in board view follow the global card pattern:
+- Use three-dots menu button for all actions (see `/docs/components/card-pattern.md`)
+- Actions accessed via dropdown menu (see `/docs/components/dropdown-pattern.md`)
+- No inline action buttons at card bottom
+- Maintain clean, scannable card design
+- All cards use consistent interaction pattern
 
 ### List view
 Use when the user benefits from denser scanning while keeping row-level narrative clarity.
