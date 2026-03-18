@@ -75,9 +75,15 @@ Any future theme change should be made here first, then inherited across:
 ## Theme architecture
 All real theme values must be owned globally.
 
-Theme values may live:
-- directly in this file
-- or in named theme files under `/docs/theme/`
+Real theme values should live in named theme files under `/docs/theme/`.
+
+This file governs:
+- the theme model
+- the theme registry
+- the active theme selection
+- the rules for how themes are applied across the product
+
+This file should not duplicate the full token values of any named theme unless there is a temporary migration reason.
 
 Other files must not define raw theme values.
 Other files may only reference:
